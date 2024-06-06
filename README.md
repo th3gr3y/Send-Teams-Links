@@ -24,3 +24,7 @@ The script then waits for 5 seconds to give time for the Teams meeting link to b
 Finally, it sends the meeting request and releases the Outlook and meeting objects.
 
 Please note that this script assumes that all meeting recipients are valid and that Outlook is set up to automatically include a Teams meeting link when creating a new meeting request. Also, it highly relies on the GUI interactions, meaning it might behave differently based on the actual user interface of the system. Moreover, the file path and some other aspects are hardcoded, limiting the reusability of the code without modifications.
+
+The Excel File should have the following data;
+
+Name,	To,	CC,	Location,	Subject,	Meeting Start Time,	Meeting End Time,	Description
