@@ -13,6 +13,8 @@ Next, it processes the date columns to ensure they are in datetimes using pd.to_
 
 It then starts a loop that iterates through each row of the DataFrame (df) returned by pd.read_excel(). For each row, it creates a new meeting request using outlook.CreateItem(1), where number 1 corresponds to an AppointmentItem in Outlook.
 
+Insure you add the teams meeting shortcut to the quicklaunch toolbar to enable pyautogui to create a teams link in the meeting request :)
+
 The meeting details (subject, start and end time, location, and description) are set from corresponding columns of the DataFrame.
 
 The list of attendees (recipients) for each meeting are derived from ‘To’ and ‘CC’ columns of DataFrame.
@@ -23,7 +25,7 @@ The script then waits for 5 seconds to give time for the Teams meeting link to b
 
 Finally, it sends the meeting request and releases the Outlook and meeting objects.
 
-Please note that this script assumes that all meeting recipients are valid and that Outlook is set up to automatically include a Teams meeting link when creating a new meeting request. Also, it highly relies on the GUI interactions, meaning it might behave differently based on the actual user interface of the system. Moreover, the file path and some other aspects are hardcoded, limiting the reusability of the code without modifications.
+Please note that this script assumes that all meeting recipients are valid and that Outlook is set up to automatically include a Teams meeting link when creating a new meeting request. Also, it highly relies on the GUI interactions, meaning it might behave differently based on the actual user interface of the system.
 
 The Excel File should have the following data;
 
